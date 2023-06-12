@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Agreement Approval</title>
+</head>
+<body>
+<style>
+#checkbox-error{
+color: red;
+display: none;
+}
+.next{
+cursor: pointer;
+}
+</style>
+<script>
+function checkAgreement(){
+var checkbox = document.getElementById("agreement-checkbox");
+var errorSpan = document.getElementById('checkbox-error');
+
+if(checkbox.checked){
+alert('Accepted');
+window.location.href = "learn.html";
+}else{
+errorSpan.style.display = "block";
+}
+}
+</script>
+<h1>Agreement</h1>
+<form>
+<label>
+<input type='checkbox' id='agreement-checkbox'>
+I am agreeing the terms and condition
+</label>
+<br>
+<span id='checkbox-error'>Please agree to the terms and condition To enter and read Learn More</span>
+<br>
+<button type='button' onclick='checkAgreement()' class='next'>Next</button>
+</form>
+</body>
+</html>

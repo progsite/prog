@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<title>Verification Centre</title>
+</head>
+<body>
+<style>
+
+</style>
+<script>
+let randomNumber = Math.floor(Math.random() * 90000) + 10000;
+
+alert('Verification Code is ' + randomNumber);
+
+let userInput = prompt('Enter the verification Number That was shown at first!');
+
+if(userInput == randomNumber){
+alert('Access Granted! Welcome to our Website!');
+window.location = "prog web.html";
+}else{
+window.location = "error.html";
+}
+</script>
+
+</body>
+</html>
